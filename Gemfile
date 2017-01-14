@@ -32,7 +32,6 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'bootstrap-sass'
 gem 'awesome_rails_console'
-gem 'font_awesome'
 gem 'devise'
 gem 'simple_form'
 gem 'font-awesome-rails'
