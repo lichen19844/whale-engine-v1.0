@@ -16,3 +16,11 @@
 //= require bootstrap/alert
 //= require bootstrap/dropdown
 //= require_tree .
+
+
+//= require bootstrap/carousel
+
+$(document).ready(function() {
+  $('#myCarousel').carousel({interval: 1400});
+
+});

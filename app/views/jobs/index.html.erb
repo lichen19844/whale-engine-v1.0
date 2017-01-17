@@ -1,4 +1,4 @@
-<div class="dropdown clearfix pull-right">
+<!-- <div class="dropdown clearfix pull-right">
   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     排序
       <span class="caret"></span>
@@ -47,4 +47,83 @@
     <% end %>
   </tbody>
 
-</table>
+</table> -->
+
+<!--分割线-->
+
+<div id="myCarousel" class="carousel slide">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+ </ol>
+ <div class="carousel-inner", align="center">
+    <div class="item active">
+     <a href="#">
+      <img src="http://file.digitaling.com/eImg/uimages/20161130/1480492453271430.gif" alt="First slide">
+      <div class="carousel-caption"></div>
+     </a>
+    </div>
+    <div class="item">
+     <a href="#">
+      <img src="http://file.digitaling.com/eImg/uimages/20161130/1480492453418698.gif" alt="Second slide">
+      <div class="carousel-caption"></div>
+     </a>
+    </div>
+    <div class="item">
+      <a href="#">
+        <img src="http://file.digitaling.com/eImg/uimages/20161130/1480492646664530.gif" alt="Third slide">
+        <div class="carousel-caption"></div>
+      </a>
+    </div>
+  </div>
+
+ <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+   <span class="glyphicon glyphicon-chevron-left"></span>
+ </a>
+ <a class="carousel-control right" href="#myCarousel" data-slide="next">
+   <span class="glyphicon glyphicon-chevron-right"></span>
+ </a>
+</div>
+ <!-- /container -->
+
+<div class="dropdown clearfix pull-right">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      你挑~
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
+        <li>
+          <%= link_to("少劳少得", jobs_path(:order => "by_lower_bound")) %>
+        </li>
+        <li>
+            <%= link_to("多劳多得", jobs_path(:order => "by_upper_bound")) %>
+
+        </li>
+        <li>
+          <%= link_to("业务入驻先后", jobs_path ) %>
+
+        </li>
+    </ul>
+</div>
+
+<div class="container">
+	<div class="row">
+	<h2 style="text-align:center"> 分享主题列表</h2>
+
+<div>
+    <% @jobs.each do |job| %>
+
+<div class="col-md-3 col-sm-3 col-xs-12">
+<div class="columns">
+  <ul class="name">
+    <li class="header"><%= link_to(job.title, job_path(job)) %> </li>
+    <li class="highlight">薪酬下限／场：￥<%= job.wage_lower_bound %></li>
+    <li class="highlight">薪酬上限／场：￥<%= job.wage_upper_bound %></li>
+    <li class="highlight">创建时间：<%= job.created_at %></li>
+    <li class="grey"><%= link_to("查看详情", job_path(job)) %></li>
+  </ul>
+</div>
+</div>
+<% end %>
+</div>
