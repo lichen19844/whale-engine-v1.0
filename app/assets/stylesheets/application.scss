@@ -18,7 +18,7 @@
 
 
  .navbar-bg-clr {
-   height: 6px;
+   height: 60px;
    background-color: black;
    margin: 0 -15px 0px;
 
@@ -176,13 +176,11 @@
     width: 200px;//这里用指定宽度把btn拉得更长
 }
 
-
  @media (min-width: 768px) {
     .navbar {
         border-radius: 0;//圆角为0
     }
 }
-
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
