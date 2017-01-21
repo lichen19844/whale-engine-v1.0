@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Job Listing</title>
+    <title>鲸 擎 🐳</title>
+    <link rel="icon" href="http://concat.lietou-static.com/dev/core/pc/revs/v3/static/images/favicon_1c83d380.ico" type="image/x-icon">
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,7 +12,9 @@
 
   <body>
     <div class="container-fluid">
-      <%= render "common/navbar" %>
+      <div class="row">
+        <%= render "common/navbar" %>
+      </div>
       <%= render "common/flashes" %>
       <%= yield %>
     </div>
